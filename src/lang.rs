@@ -20,6 +20,8 @@ mod ja;
 mod ko;
 mod kz;
 mod lt;
+mod lv;
+mod nb;
 mod nl;
 mod pl;
 mod ptbr;
@@ -42,6 +44,7 @@ pub const LANGS: &[(&str, &str)] = &[
     ("fr", "Français"),
     ("de", "Deutsch"),
     ("nl", "Nederlands"),
+    ("nb", "Norsk bokmål"),
     ("zh-cn", "简体中文"),
     ("zh-tw", "繁體中文"),
     ("pt", "Português"),
@@ -70,6 +73,7 @@ pub const LANGS: &[(&str, &str)] = &[
     ("sl", "Slovenščina"),
     ("ro", "Română"),
     ("lt", "Lietuvių"),
+    ("lv", "Latviešu"),
     ("ar", "العربية"),
 ];
 
@@ -107,6 +111,7 @@ pub fn translate_locale(name: String, locale: &str) -> String {
         "it" => it::T.deref(),
         "zh-tw" => tw::T.deref(),
         "de" => de::T.deref(),
+        "nb" => nb::T.deref(),
         "nl" => nl::T.deref(),
         "es" => es::T.deref(),
         "hu" => hu::T.deref(),
@@ -135,6 +140,7 @@ pub fn translate_locale(name: String, locale: &str) -> String {
         "sl" => sl::T.deref(),
         "ro" => ro::T.deref(),
         "lt" => lt::T.deref(),
+        "lv" => lv::T.deref(),
         "ar" => ar::T.deref(),
         _ => en::T.deref(),
     };
